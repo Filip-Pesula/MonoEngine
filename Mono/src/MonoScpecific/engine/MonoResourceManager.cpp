@@ -42,10 +42,10 @@ namespace monoEngine {
 			Material::LayoutType::Triangles,
 			&woodTexture)
 	{
-		MonkeyObj.readObject("G:\\Programming\\c++\\MonoEngine\\Mono\\3DObjects\\Monkey.obj");
-		TreeObj.readObject("G:\\Programming\\c++\\MonoEngine\\Mono\\3DObjects\\Tree.obj");
-		RasterPlaneObj.readObject("G:\\Programming\\c++\\MonoEngine\\Mono\\3DObjects\\RasterPlaneV2.obj");
-		CottageObj.readObject("G:\\Programming\\c++\\MonoEngine\\Mono\\3DObjects\\Sphere.obj");
+		MonkeyObj.readObject("3DObjects\\Monkey.obj");
+		TreeObj.readObject("3DObjects\\Tree.obj");
+		RasterPlaneObj.readObject("3DObjects\\RasterPlaneV2.obj");
+		CottageObj.readObject("3DObjects\\Sphere.obj");
 		cross = SampleObjects::genCross();
 
 

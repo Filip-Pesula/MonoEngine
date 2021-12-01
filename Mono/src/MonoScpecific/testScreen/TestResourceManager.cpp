@@ -31,11 +31,11 @@ namespace test {
 	}
 	void ResourceManager::loadObjects()
 	{
-		MonkeyObj.readObject("G:\\Programming\\c++\\MonoEngine\\Mono\\3DObjects\\Monkey.obj");
-		TreeObj.readObject("G:\\Programming\\c++\\MonoEngine\\Mono\\3DObjects\\Tree.obj");
-		RasterPlaneObj.readObject("G:\\Programming\\c++\\MonoEngine\\Mono\\3DObjects\\RasterPlaneV2.obj");
-		sphereObj.readObject("G:\\Programming\\c++\\MonoEngine\\Mono\\3DObjects\\Sphere.obj");
-		CottageObj.readObject("G:\\Programming\\c++\\MonoEngine\\Mono\\3DObjects\\cottage_obj.obj");
+		MonkeyObj.readObject("3DObjects\\Monkey.obj");
+		TreeObj.readObject("3DObjects\\Tree.obj");
+		RasterPlaneObj.readObject("3DObjects\\RasterPlaneV2.obj");
+		sphereObj.readObject("3DObjects\\Sphere.obj");
+		CottageObj.readObject("3DObjects\\cottage_obj.obj");
 	}
 	void ResourceManager::loadMaterials()
 	{

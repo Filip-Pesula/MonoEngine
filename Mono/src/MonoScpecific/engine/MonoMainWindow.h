@@ -37,7 +37,7 @@ namespace monoEngine
 
 
 		int activeList = -1;
-		Scene currentScene{ "G:\\Programming\\c++\\MonoEngine\\Mono\\res/Scene1.mnsc" };
+		Scene currentScene{ "res/Scene1.mnsc" };
 
 	public:
 		~MonoMainWindow();

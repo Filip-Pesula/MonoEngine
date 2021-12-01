@@ -11,18 +11,18 @@ namespace test
 	{
 	private:
 		//textureStrings;
-		const std::string woodTextureFileRef{ "G:\\Programming\\c++\\MonoEngine\\Mono\\Textures\\drevo.jpg" };
-		const std::string ironTextureFileRef{ "G:\\Programming\\c++\\MonoEngine\\Mono\\Textures\\iron.jpg" };
-		const std::string cubeTextureFileRef{ "G:\\Programming\\c++\\MonoEngine\\Mono\\Textures\\CubeTex.png" };
-		const std::string rasterTextureFileRef{ "G:\\Programming\\c++\\MonoEngine\\Mono\\Textures\\Raster4k.png" };
-		const std::string treeTextureFileRef{ "G:\\Programming\\c++\\MonoEngine\\Mono\\Textures\\TreeTexture.png" };
-		const std::string bricksTextureFileRef{ "G:\\Programming\\c++\\MonoEngine\\Mono\\Textures\\BricksFlemishRed.jpg" };
-		const std::string bricksNormalTextureFileRef{ "G:\\Programming\\c++\\MonoEngine\\Mono\\Textures\\BricksFlemishRedNormal.png" };
-		const std::string cottageTextureRef{ "G:\\Programming\\c++\\MonoEngine\\Mono\\Textures\\cottage_diffuse.png" };
-		const std::string cottageNormalRef{ "G:\\Programming\\c++\\MonoEngine\\Mono\\Textures\\cottage_normal.png" };
+		const std::string woodTextureFileRef{ "Textures\\drevo.jpg" };
+		const std::string ironTextureFileRef{ "Textures\\iron.jpg" };
+		const std::string cubeTextureFileRef{ "Textures\\CubeTex.png" };
+		const std::string rasterTextureFileRef{ "Textures\\Raster4k.png" };
+		const std::string treeTextureFileRef{ "Textures\\TreeTexture.png" };
+		const std::string bricksTextureFileRef{ "Textures\\BricksFlemishRed.jpg" };
+		const std::string bricksNormalTextureFileRef{ "Textures\\BricksFlemishRedNormal.png" };
+		const std::string cottageTextureRef{ "Textures\\cottage_diffuse.png" };
+		const std::string cottageNormalRef{ "Textures\\cottage_normal.png" };
 		//UI textures
-		const std::string textTextureFileRef{ "G:\\Programming\\c++\\MonoEngine\\Mono\\Textures\\text\\Font1_1.bmp" };
-		const std::string btnTextureFileRef{ "G:\\Programming\\c++\\MonoEngine\\Mono\\Textures\\btn.png" };
+		const std::string textTextureFileRef{ "Textures\\text\\Font1_1.bmp" };
+		const std::string btnTextureFileRef{ "Textures\\btn.png" };
 
 		void loadTextures();
 		void loadObjects();

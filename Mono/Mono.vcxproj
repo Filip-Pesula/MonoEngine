@@ -103,7 +103,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)glew-2.1.0\include;$(ProjectDir)GLFW\include;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)glew-2.1.0\include;$(ProjectDir)GLFW\include;$(ProjectDir)src;$(SolutionDir)Lib\glew-2.1.0\include;$(SolutionDir)Lib\GLFW\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>Debug;_CRTDBG_MAP_ALLOC;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <ShowIncludes>false</ShowIncludes>
