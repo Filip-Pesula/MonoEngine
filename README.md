@@ -1,7 +1,10 @@
 # MonoEngine
+Code for:</br>
+vs 17+ </br>
+ISO C++20</br>
 
-Engine Space movement:\n
-WSAD: mowement
-LCtrl - Space: Up-Down
-R-Mouse-Button: rotate camera
-LShift: speed up
+Engine Space movement:</br>
+WSAD: mowement</br>
+LCtrl - Space: Up-Down</br>
+R-Mouse-Button: rotate camera</br>
+LShift: speed up</br>
