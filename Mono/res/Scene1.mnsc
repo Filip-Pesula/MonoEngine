@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scene name="MainGameScene">
+	<var name="externalRes"></var>
+	<fileRef name="~1"></fileRef>
+	<ObjectList>
+		<Object name="Sphere">
+			
+			<res>
+				<model type="obj"></model>
+			</res>
+		</Object>
+		<Object name="UIobj2" fileRef="~1">
+		</Object>
+		<Object name="UIobj3" fileRef="~1">
+		</Object>
+	</ObjectList>
+</scene>

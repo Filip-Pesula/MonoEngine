@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="res">
+      <UniqueIdentifier>{ce49b8d2-0ef1-47bf-b9f5-e9fcf327dbe9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\assets">
+      <UniqueIdentifier>{656c04f5-ee0b-44ef-810a-9cec4d002e18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\script">
+      <UniqueIdentifier>{dd3bf8da-6f79-45ef-a92b-0a604faa4879}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NewFilter1">
+      <UniqueIdentifier>{efe91463-08de-4c24-bf17-baa69bb6e1ea}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="res\scripts\Run.cpp">
+      <Filter>res\script</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

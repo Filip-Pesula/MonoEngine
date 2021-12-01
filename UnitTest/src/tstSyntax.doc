@@ -1,0 +1,10 @@
+TST file is a text file defined as:
+#<filePath> //starting from current tested app or absolute path
+test:<methodName>
+	any <methodName>(string x1,int x2,...,any xn)  //x can be any name describing input variable
+		stat x1 = 5; 
+		stat x2 = 8;
+	Test == 40; //staticaly tests function with one set of specified input and output
+		stat x1 = 5;
+		x2 = 1..1..50; // start..step..end; start and end inclusively;
+	Test == x1*x2; //dinamically tests function with specified step;

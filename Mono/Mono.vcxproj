@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|Win32">
+      <Configuration>Test</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Test|x64">
+      <Configuration>Test</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{1812B181-6588-4977-A376-B6A85D94A3C6}</ProjectGuid>
+    <RootNamespace>Mono</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Mono</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)glew-2.1.0\include;$(ProjectDir)GLFW\include;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>Debug;_CRTDBG_MAP_ALLOC;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ShowIncludes>false</ShowIncludes>
+      <LanguageStandard_C>Default</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;User32.lib;shell32.lib;Gdi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)GLFW\lib-vc2015;$(SolutionDir)glew-2.1.0\lib\Release\Win32</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)glew-2.1.0\include;$(ProjectDir)GLFW\include;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TEST;Debug;_CRTDBG_MAP_ALLOC;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;User32.lib;shell32.lib;Gdi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)GLFW\lib-vc2015;$(SolutionDir)glew-2.1.0\lib\Release\Win32</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(SolutionDir)GLFW\lib-vc2015;$(SolutionDir)glew-2.1.0\lib\Release\x64</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(SolutionDir)GLFW\lib-vc2015;$(SolutionDir)glew-2.1.0\lib\Release\x64</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)glew-2.1.0\include;$(ProjectDir)GLFW\include;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>x32;RELEASE;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>false</ExceptionHandling>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;User32.lib;shell32.lib;Gdi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)GLFW\lib-vc2015;$(SolutionDir)glew-2.1.0\lib\Release\Win32</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>x64;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)GLFW\lib-vc2015;$(SolutionDir)glew-2.1.0\lib\Release\x64</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\3dRender\GR_Object.cpp" />
+    <ClCompile Include="src\3dRender\Renderer.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\Efectors\GraphycsBodyEfector.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\Efectors\MoveEfector.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\uiClusters\inputElelements\InputElement.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\uiClusters\inputElelements\SliderField.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\uiClusters\EfectorEditor.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\Efectors\Efector.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\Efectors\ScriptEfector.cpp" />
+    <ClCompile Include="src\3dRender\Material.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\uiClusters\ObectEfectorEditor.cpp" />
+    <ClCompile Include="src\MonoStd\monoMath.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\SceneRenderer.cpp" />
+    <ClCompile Include="src\resourceManagment\ObjLoader.cpp" />
+    <ClCompile Include="src\resourceManagment\SampleObjects.cpp" />
+    <ClCompile Include="src\UI\Elements\BetterText.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\uiClusters\RenderFrame.cpp" />
+    <ClCompile Include="src\UI\Elements\BetterButton.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\MonoResourceManager.cpp" />
+    <ClCompile Include="src\MonoScpecific\testScreen\TestResourceManager.cpp" />
+    <ClCompile Include="src\resourceManagment\TextureRes.cpp" />
+    <ClCompile Include="src\resourceManagment\FileLoader.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\monoResourceManagment\SceneLoader.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\SceneObject.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\Scene.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\uiClusters\SceneList.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\MonoMainWindow.cpp" />
+    <ClCompile Include="src\MonoScpecific\engine\uiClusters\MenuList.cpp" />
+    <ClCompile Include="src\UI\Elements\Container.cpp" />
+    <ClCompile Include="src\UI\Elements\Grabber.cpp" />
+    <ClCompile Include="src\UI\Elements\Img.cpp" />
+    <ClCompile Include="src\UI\Elements\Slider.cpp" />
+    <ClCompile Include="src\UI\UIcanvas.cpp" />
+    <ClCompile Include="src\3dRender\Animator.cpp" />
+    <ClCompile Include="src\BeGL\BeGl_FrameBuffer.cpp" />
+    <ClCompile Include="src\3dRender\Camera.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Texture.cpp" />
+    <ClCompile Include="src\MonoStd\Timer.cpp" />
+    <ClCompile Include="src\UI\UI.cpp" />
+    <ClCompile Include="src\Vec\Vec3.cpp" />
+    <ClCompile Include="src\Vec\Vecf.cpp" />
+    <ClCompile Include="src\Vec\Vec.cpp" />
+    <ClCompile Include="src\UI\Window.cpp" />
+    <ClCompile Include="src\MonoScpecific\testScreen\TestWindow.cpp" />
+    <ClCompile Include="src\UI\Elements\UIelement.cpp" />
+    <ClCompile Include="src\resourceManagment\XmlLoader.cpp" />
+    <ClCompile Include="src\Test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\MonoScpecific\engine\Efectors\GraphycsBodyEfector.h" />
+    <ClInclude Include="src\MonoScpecific\engine\Efectors\MoveEfector.h" />
+    <ClInclude Include="src\MonoScpecific\engine\uiClusters\inputElelements\InputElement.h" />
+    <ClInclude Include="src\MonoScpecific\engine\uiClusters\inputElelements\SliderField.h" />
+    <ClInclude Include="src\MonoScpecific\engine\uiClusters\EfectorEditor.h" />
+    <ClInclude Include="src\MonoScpecific\engine\Efectors\Efector.h" />
+    <ClInclude Include="src\MonoScpecific\engine\Efectors\ScriptEfector.h" />
+    <ClInclude Include="src\MonoScpecific\engine\uiClusters\ObectEfectorEditor.h" />
+    <ClInclude Include="src\MonoStd\monoConcepts.h" />
+    <ClInclude Include="src\MonoStd\monoMath.h" />
+    <ClInclude Include="src\MonoScpecific\engine\SceneRenderer.h" />
+    <ClInclude Include="src\resourceManagment\ObjLoader.h" />
+    <ClInclude Include="src\UI\Elements\BetterText.h" />
+    <ClInclude Include="src\MonoScpecific\engine\uiClusters\RenderFrame.h" />
+    <ClInclude Include="src\UI\Elements\BetterButton.h" />
+    <ClInclude Include="src\MonoScpecific\engine\MonoResourceManager.h" />
+    <ClInclude Include="src\MonoScpecific\testScreen\TestResourceManager.h" />
+    <ClInclude Include="src\resourceManagment\FileLoader.h" />
+    <ClInclude Include="src\MonoScpecific\engine\monoResourceManagment\SceneLoader.h" />
+    <ClInclude Include="src\MonoScpecific\engine\SceneObject.h" />
+    <ClInclude Include="src\MonoScpecific\engine\Scene.h" />
+    <ClInclude Include="src\MonoScpecific\engine\uiClusters\SceneList.h" />
+    <ClInclude Include="src\MonoScpecific\engine\uiClusters\MenuList.h" />
+    <ClInclude Include="src\resourceManagment\TextureRes.h" />
+    <ClInclude Include="src\UI\CustomUiElement.h" />
+    <ClInclude Include="src\MonoScpecific\engine\MonoMainWindow.h" />
+    <ClInclude Include="src\UI\Cursor.h" />
+    <ClInclude Include="src\UI\Elements\Container.h" />
+    <ClInclude Include="src\UI\Elements\Grabber.h" />
+    <ClInclude Include="src\UI\Elements\Img.h" />
+    <ClInclude Include="src\UI\Elements\Slider.h" />
+    <ClInclude Include="src\UI\UIcanvas.h" />
+    <ClInclude Include="src\BeGL\BeGL.h" />
+    <ClInclude Include="src\3dRender\Animator.h" />
+    <ClInclude Include="src\BeGL\BeGL_FrameBuffer.h" />
+    <ClInclude Include="src\3dRender\Camera.h" />
+    <ClInclude Include="src\Custom.h" />
+    <ClInclude Include="src\Engine.h" />
+    <ClInclude Include="src\resourceManagment\FaceScript.h" />
+    <ClInclude Include="src\3dRender\GR_Object.h" />
+    <ClInclude Include="src\3dRender\Material.h" />
+    <ClInclude Include="src\MonoScpecific\engine\monoUIshader.h" />
+    <ClInclude Include="src\3dRender\Renderer.h" />
+    <ClInclude Include="src\resourceManagment\SampleObjects.h" />
+    <ClInclude Include="src\resourceManagment\ShaderLoader.h" />
+    <ClInclude Include="src\resourceManagment\stb_image.h" />
+    <ClInclude Include="src\Texture.h" />
+    <ClInclude Include="src\MaybeForLater\TextVx.h" />
+    <ClInclude Include="src\MonoStd\Timer.h" />
+    <ClInclude Include="src\UI\FontRef.h" />
+    <ClInclude Include="src\UI\InputPoll.h" />
+    <ClInclude Include="src\MonoScpecific\engine\MonoUIrenderrer.h" />
+    <ClInclude Include="src\UI\UI.h" />
+    <ClInclude Include="src\UI\Elements\UiElements.h" />
+    <ClInclude Include="src\UI\UIenums.h" />
+    <ClInclude Include="src\UI\UIf.h" />
+    <ClInclude Include="src\UI\UIshader.h" />
+    <ClInclude Include="src\UI\UIShaderString.h" />
+    <ClInclude Include="src\Vec\Unit.h" />
+    <ClInclude Include="src\Vec\Vec.h" />
+    <ClInclude Include="src\Vec\Vec2.h" />
+    <ClInclude Include="src\Vec\Vec3.h" />
+    <ClInclude Include="src\Vec\Vecf.h" />
+    <ClInclude Include="src\MonoScpecific\testScreen\TestWindow.h" />
+    <ClInclude Include="src\UI\Elements\UIelement.h" />
+    <ClInclude Include="src\Test.h" />
+    <ClInclude Include="UI\FontRef.h" />
+    <ClInclude Include="UI\UIenums.h" />
+    <ClInclude Include="UI\UIshader.h" />
+    <ClInclude Include="UI\UIShaderString.h" />
+    <ClInclude Include="UI\UI.h" />
+    <ClInclude Include="src\BeGL\BeGL_Uniform.h" />
+    <ClInclude Include="src\UI\Window.h" />
+    <ClInclude Include="src\resourceManagment\XmlLoader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\Scene1.mnsc" />
+    <None Include="src\Mono.vcxproj" />
+    <None Include="src\Mono.vcxproj.filters" />
+    <None Include="src\Mono.vcxproj.user" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

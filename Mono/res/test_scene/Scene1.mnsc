@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<scene name="MainGameScene">
+	<var name="externalRes"></var>
+	<fileRef name="~1"></fileRef>
+	<res>
+		<mesh type="obj">cottage_obj.obj</mesh>
+	</res>
+	<ObjectList>
+		<Object name="Sphere">
+			<Efector type="#MoveEfector">
+				<xPos>0.1</xPos>
+				<yPos>0.1</yPos>
+				<zPos>0.1</zPos>
+			</Efector>
+			<Efector type="#GraphycsBodyEfector">
+				<mesh type="obj">cottage_obj.obj</mesh>
+			</Efector>
+
+		</Object>
+		<Object name="UIobj2" fileRef="~1">
+		</Object>
+		<Object name="UIobj3" fileRef="~1">
+		</Object>
+	</ObjectList>
+</scene>
