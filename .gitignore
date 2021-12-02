@@ -17,6 +17,7 @@
 mono_crash.*
 
 # Build results
+[Tt]est/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -123,7 +124,7 @@ ipch/
 # TFS 2012 Local Workspace
 $tf/
 
-# Guidance Automation Toolkit
+# Guidance Automation Toolkit 
 *.gpState
 
 # ReSharper is a .NET coding add-in

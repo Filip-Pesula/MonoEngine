@@ -18,7 +18,7 @@ namespace UI
 		UI* getUIptr();
 
 		/* Swap front and back buffers */
-
+		void close();
 		Vec2i getSize();
 		void swapBuffers();
 		bool WindowShouldClose();

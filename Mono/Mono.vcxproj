@@ -103,7 +103,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)glew-2.1.0\include;$(ProjectDir)GLFW\include;$(ProjectDir)src;$(SolutionDir)Lib\glew-2.1.0\include;$(SolutionDir)Lib\GLFW\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)glew-2.1.0\include;$(ProjectDir)GLFW\include;$(ProjectDir)src;$(SolutionDir)Lib\glew-2.1.0\include;$(SolutionDir)Lib\GLFW\include;$(SolutionDir)Lib\glew-2.1.0\include;$(SolutionDir)Lib\GLFW\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>Debug;_CRTDBG_MAP_ALLOC;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <ShowIncludes>false</ShowIncludes>
@@ -112,7 +112,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;User32.lib;shell32.lib;Gdi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)Lib\GLFW\lib-vc2015;$(SolutionDir)Lib\glew-2.1.0\lib\Release\Win32</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Lib\glew-2.1.0\lib\Release\Win32;$(SolutionDir)Lib\GLFW\lib-vc2015;$(SolutionDir)Lib\glew-2.1.0\lib\Release\Win32;$(SolutionDir)Lib\GLFW\lib-vc2015</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|Win32'">
@@ -121,7 +121,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)glew-2.1.0\include;$(ProjectDir)GLFW\include;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)glew-2.1.0\include;$(ProjectDir)GLFW\include;$(ProjectDir)src;$(SolutionDir)Lib\glew-2.1.0\include;$(SolutionDir)Lib\GLFW\include;</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>TEST;Debug;_CRTDBG_MAP_ALLOC;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <ShowIncludes>false</ShowIncludes>
@@ -129,7 +129,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;User32.lib;shell32.lib;Gdi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)GLFW\lib-vc2015;$(SolutionDir)glew-2.1.0\lib\Release\Win32</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Lib\glew-2.1.0\lib\Release\Win32;$(SolutionDir)Lib\GLFW\lib-vc2015;)Lib\GLFW\lib-vc2015;$(SolutionDir)Lib\glew-2.1.0\lib\Release\Win32;$(SolutionDir)GLFW\lib-vc2015;$(SolutionDir)glew-2.1.0\lib\Release\Win32</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -164,7 +164,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)glew-2.1.0\include;$(ProjectDir)GLFW\include;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)glew-2.1.0\include;$(ProjectDir)GLFW\include;$(ProjectDir)src;$(SolutionDir)Lib\glew-2.1.0\include;$(SolutionDir)Lib\GLFW\include;</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>x32;RELEASE;GLEW_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>false</ExceptionHandling>
       <LanguageStandard>stdcpplatest</LanguageStandard>
@@ -174,7 +174,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;User32.lib;shell32.lib;Gdi32.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)GLFW\lib-vc2015;$(SolutionDir)glew-2.1.0\lib\Release\Win32</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Lib\glew-2.1.0\lib\Release\Win32;$(SolutionDir)Lib\GLFW\lib-vc2015;)Lib\GLFW\lib-vc2015;$(SolutionDir)Lib\glew-2.1.0\lib\Release\Win32;$(SolutionDir)GLFW\lib-vc2015;$(SolutionDir)glew-2.1.0\lib\Release\Win32</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -210,6 +210,7 @@
     <ClCompile Include="src\MonoScpecific\engine\SceneRenderer.cpp" />
     <ClCompile Include="src\resourceManagment\ObjLoader.cpp" />
     <ClCompile Include="src\resourceManagment\SampleObjects.cpp" />
+    <ClCompile Include="src\resourceManagment\XmlDocLoader.cpp" />
     <ClCompile Include="src\UI\Elements\BetterText.cpp" />
     <ClCompile Include="src\MonoScpecific\engine\uiClusters\RenderFrame.cpp" />
     <ClCompile Include="src\UI\Elements\BetterButton.cpp" />
@@ -257,6 +258,7 @@
     <ClInclude Include="src\MonoStd\monoMath.h" />
     <ClInclude Include="src\MonoScpecific\engine\SceneRenderer.h" />
     <ClInclude Include="src\resourceManagment\ObjLoader.h" />
+    <ClInclude Include="src\resourceManagment\XmlDocLoader.h" />
     <ClInclude Include="src\UI\Elements\BetterText.h" />
     <ClInclude Include="src\MonoScpecific\engine\uiClusters\RenderFrame.h" />
     <ClInclude Include="src\UI\Elements\BetterButton.h" />

@@ -3,6 +3,7 @@
 #include <UI/Elements/UiElements.h>
 #include <MonoScpecific/engine/uiClusters/inputElelements/SliderField.h>
 #include <resourceManagment/ObjLoader.h>
+#include <resourceManagment/XmlDocLoader.h>
 int Test::failedTestCount = 0;
 int Test::testRan = 0;
 std::vector<std::string> Test::failedTests;
@@ -17,7 +18,7 @@ void Test::testXmlLoader() {
 	XmlLoader xmlLoader{};
 
 
-	ASSERT_EQUALS(xmlLoader.getXmlContent("G:\\Programming\\c++\\MonoEngine\\Mono\\res/testXml.xml"), true, "could not load file testXml.xml");
+	ASSERT_EQUALS(xmlLoader.getXmlContent("res/testXml.xml"), true, "could not load file testXml.xml");
 
 #ifdef TEST
 	xmlLoader.test();
@@ -57,12 +58,22 @@ void Test::testXmlLoader() {
 	std::string xPosData =  xmlLoader.getObjectContent(xmlLoader.findChildrenOfObject("xPos",sceneObjects[0])[0]);
 
 	ASSERT_EQUALS(xPosData, "0.1" , "could not read xPos Data");
+	float xPosf = 0;
+	try {
+		xPosf = std::stof(xPosData);
+	}
+	catch (std::invalid_argument e) {
 
-	float xPosf = std::stof(xPosData);
+	}
 	ASSERT_EQUALS(xPosf, 0.1, "xPos Convertion Error");
-	
 
 	xmlLoader.findAllChildrenOf(sceneObjet[0]);
+
+	XmlDocLoader docLoader;
+	docLoader.read("res/testXml.xml");
+	ASSERT_NOT_NULLPTR(docLoader.getDoc(),"failed to load file");
+
+
 }
 
 void TestUI()
@@ -81,7 +92,7 @@ void TestObjLoader()
 #ifdef TEST
 	ObjLoader TreeObj;
 	TreeObj.test();
-	TreeObj.readObject("G:\\Programming\\c++\\MonoEngine\\Mono\\3DObjects\\Tree.obj");
+	TreeObj.readObject("3DObjects\\Tree.obj");
 #endif // TEST
 
 	

@@ -8,7 +8,7 @@ namespace UI
 
 		eWindow = window;
 		CreateShader(ShaderUIShader);
-		SliderTexture = Texture("G:\\Programming\\c++\\MonoEngine\\Mono\\Textures\\slider32.png", Texture::TextureType::uI_texture);
+		SliderTexture = Texture("Textures\\slider32.png", Texture::TextureType::uI_texture);
 		generateEdgeVertex(&tiledVertex, &tiledIndex, 0);
 		genStaticBuffers(eTiledVertex, eTiledIndex, tiledVertex, 64, tiledIndex, 54);
 		frameBuffer = BeGL::GlFrameBuffer(width, heihgt);

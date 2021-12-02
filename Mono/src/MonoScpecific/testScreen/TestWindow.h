@@ -57,6 +57,7 @@ namespace test
 		TestWindow();
 		void draw();
 		bool WindowShouldClose();
+		void close();
 	};
 }
 

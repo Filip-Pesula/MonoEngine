@@ -23,6 +23,10 @@ namespace UI
 	{
 		return &windowUI;
 	}
+	void Window::close()
+	{
+		glfwDestroyWindow(window);
+	}
 	Vec2i Window::getSize()
 	{
 		int x = 0; int y = 0;

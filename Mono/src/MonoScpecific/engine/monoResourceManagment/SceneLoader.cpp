@@ -1,4 +1,5 @@
 #include "SceneLoader.h"
+
 namespace monoEngine
 {
 	SceneLoader::SceneLoader(std::string filePath, Scene& scene) :

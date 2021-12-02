@@ -114,11 +114,13 @@ int main(void)
 	{
 		//glfwWaitEvents();
 
-		if (testWindow.WindowShouldClose() || mainWindow.WindowShouldClose())
+		if (mainWindow.WindowShouldClose())
 		{
 			MonoEngineShouldClose = true;
 			continue;
 		}
+		if (testWindow.WindowShouldClose())
+			testWindow.close();
 		
 		mainWindow.draw();
 		testWindow.draw();

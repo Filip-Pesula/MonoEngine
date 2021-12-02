@@ -299,7 +299,7 @@ std::string XmlLoader::getObjectContent(XmlProperty* xmlProperty)
 	std::stringstream unboundContent;
 	while (lineCoursor <= xmlProperty->propertyEndLine)
 	{
-
+		charCoursor = 0;
 		std::string line = fileContent[lineCoursor];
 		while (charCoursor < (int)line.length())
 		{
@@ -315,7 +315,6 @@ std::string XmlLoader::getObjectContent(XmlProperty* xmlProperty)
 			{
 				unboundContent << line[charCoursor];
 			}
-			charCoursor = 0;
 			charCoursor++;
 		}
 		lineCoursor++;

@@ -251,4 +251,8 @@ namespace test
 	{
 		return testWindow.WindowShouldClose();
 	}
+	void TestWindow::close()
+	{
+		testWindow.close();
+	}
 }

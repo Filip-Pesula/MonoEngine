@@ -7,26 +7,26 @@ namespace UI
 		*vertexArray = new float[16 * (2 + 2)];
 		float* NvertexArray = *vertexArray;
 		//inner square
-		NvertexArray[0] = -0.2f; NvertexArray[1] = 0.2f; NvertexArray[2] = 0.4; NvertexArray[3] = 0.6; //0
-		NvertexArray[4] = 0.2f; NvertexArray[5] = 0.2f; NvertexArray[6] = 0.6; NvertexArray[7] = 0.6; //1
-		NvertexArray[8] = 0.2f; NvertexArray[9] = -0.2f; NvertexArray[10] = 0.6; NvertexArray[11] = 0.4; //2
-		NvertexArray[12] = -0.2f; NvertexArray[13] = -0.2f; NvertexArray[14] = 0.4; NvertexArray[15] = 0.4; //3
+		NvertexArray[0] = -0.2f; NvertexArray[1] = 0.2f; NvertexArray[2] = 0.4f; NvertexArray[3] = 0.6f; //0
+		NvertexArray[4] = 0.2f; NvertexArray[5] = 0.2f; NvertexArray[6] = 0.6f; NvertexArray[7] = 0.6f; //1
+		NvertexArray[8] = 0.2f; NvertexArray[9] = -0.2f; NvertexArray[10] = 0.6f; NvertexArray[11] = 0.4f; //2
+		NvertexArray[12] = -0.2f; NvertexArray[13] = -0.2f; NvertexArray[14] = 0.4f; NvertexArray[15] = 0.4f; //3
 		//outer edges
-		NvertexArray[16] = -1.0f; NvertexArray[17] = 1.0f; NvertexArray[18] = 0.0; NvertexArray[19] = 1.0; //4
-		NvertexArray[20] = -0.2f; NvertexArray[21] = 1.0f; NvertexArray[22] = 0.4; NvertexArray[23] = 1.0; //5
-		NvertexArray[24] = 0.2f; NvertexArray[25] = 1.0f; NvertexArray[26] = 0.6; NvertexArray[27] = 1.0; //6
+		NvertexArray[16] = -1.0f; NvertexArray[17] = 1.0f; NvertexArray[18] = 0.0f; NvertexArray[19] = 1.0f; //4
+		NvertexArray[20] = -0.2f; NvertexArray[21] = 1.0f; NvertexArray[22] = 0.4f; NvertexArray[23] = 1.0f; //5
+		NvertexArray[24] = 0.2f; NvertexArray[25] = 1.0f; NvertexArray[26] = 0.6f; NvertexArray[27] = 1.0f; //6
 
-		NvertexArray[28] = 1.0f; NvertexArray[29] = 1.0f; NvertexArray[30] = 1.0; NvertexArray[31] = 1.0; //7
-		NvertexArray[32] = 1.0f; NvertexArray[33] = 0.2f; NvertexArray[34] = 1.0; NvertexArray[35] = 0.6; //8
-		NvertexArray[36] = 1.0f; NvertexArray[37] = -0.2f; NvertexArray[38] = 1.0; NvertexArray[39] = 0.4; //9
+		NvertexArray[28] = 1.0f; NvertexArray[29] = 1.0f; NvertexArray[30] = 1.0f; NvertexArray[31] = 1.0f; //7
+		NvertexArray[32] = 1.0f; NvertexArray[33] = 0.2f; NvertexArray[34] = 1.0f; NvertexArray[35] = 0.6f; //8
+		NvertexArray[36] = 1.0f; NvertexArray[37] = -0.2f; NvertexArray[38] = 1.0f; NvertexArray[39] = 0.4f; //9
 
-		NvertexArray[40] = 1.0f; NvertexArray[41] = -1.0f; NvertexArray[42] = 1.0; NvertexArray[43] = 0.0; //10
-		NvertexArray[44] = 0.2f; NvertexArray[45] = -1.0f; NvertexArray[46] = 0.6; NvertexArray[47] = 0.0; //11
-		NvertexArray[48] = -0.2f; NvertexArray[49] = -1.0f; NvertexArray[50] = 0.4; NvertexArray[51] = 0.0; //12
+		NvertexArray[40] = 1.0f; NvertexArray[41] = -1.0f; NvertexArray[42] = 1.0f; NvertexArray[43] = 0.0f; //10
+		NvertexArray[44] = 0.2f; NvertexArray[45] = -1.0f; NvertexArray[46] = 0.6f; NvertexArray[47] = 0.0f; //11
+		NvertexArray[48] = -0.2f; NvertexArray[49] = -1.0f; NvertexArray[50] = 0.4f; NvertexArray[51] = 0.0f; //12
 
-		NvertexArray[52] = -1.0f; NvertexArray[53] = -1.0f; NvertexArray[54] = 0.0; NvertexArray[55] = 0.0; //13
-		NvertexArray[56] = -1.0f; NvertexArray[57] = -0.2f; NvertexArray[58] = 0.0; NvertexArray[59] = 0.4; //14
-		NvertexArray[60] = -1.0f; NvertexArray[61] = 0.2f; NvertexArray[62] = 0.0; NvertexArray[63] = 0.6; //15
+		NvertexArray[52] = -1.0f; NvertexArray[53] = -1.0f; NvertexArray[54] = 0.0f; NvertexArray[55] = 0.0f; //13
+		NvertexArray[56] = -1.0f; NvertexArray[57] = -0.2f; NvertexArray[58] = 0.0f; NvertexArray[59] = 0.4f; //14
+		NvertexArray[60] = -1.0f; NvertexArray[61] = 0.2f; NvertexArray[62] = 0.0f; NvertexArray[63] = 0.6f; //15
 
 		*indexArray = new unsigned int[54];
 		unsigned int* NindexArray = *indexArray;
@@ -132,7 +132,7 @@ namespace UI
 		glfwSetCursor(window, activeCursor);
 		eWindow = window;
 		CreateShader(ShaderUIShader);
-		SliderTexture = Texture("G:\\Programming\\c++\\MonoEngine\\Mono\\Textures\\slider32.png",Texture::TextureType::uI_texture);
+		SliderTexture = Texture("Textures\\slider32.png",Texture::TextureType::uI_texture);
 		generateEdgeVertex(&tiledVertex, &tiledIndex, 0);
 		genStaticBuffers(eTiledVertex, eTiledIndex, tiledVertex, 64, tiledIndex, 54);
 	}
