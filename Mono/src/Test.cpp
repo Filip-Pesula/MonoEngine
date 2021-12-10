@@ -4,6 +4,7 @@
 #include <MonoScpecific/engine/uiClusters/inputElelements/SliderField.h>
 #include <resourceManagment/ObjLoader.h>
 #include <resourceManagment/XmlDocLoader.h>
+#include <MonoStd/Ptr.h>
 int Test::failedTestCount = 0;
 int Test::testRan = 0;
 std::vector<std::string> Test::failedTests;
@@ -53,7 +54,7 @@ void Test::testXmlLoader() {
 
 	ASSERT_EQUALS(objectName, "Sphere", "object name error");
 	ASSERT_EQUALS(objectfileRef, "#1", "object fileRef error");
-	ASSERT_THROWS(xmlLoader.findAtributeOf("namename", sceneObjects[0]),std::string("objProperty does not exist"), "object doesn't throw")
+	ASSERT_THROWS(xmlLoader.findAtributeOf("namename", sceneObjects[0]),std::string("namename does not exist"), "object doesn't throw")
 
 	std::string xPosData =  xmlLoader.getObjectContent(xmlLoader.findChildrenOfObject("xPos",sceneObjects[0])[0]);
 
@@ -73,7 +74,16 @@ void Test::testXmlLoader() {
 	docLoader.read("res/testXml.xml");
 	ASSERT_NOT_NULLPTR(docLoader.getDoc(),"failed to load file");
 
-
+	mono::Ptr<int> ptr(6);
+	ASSERT_EQUALS(*ptr.get(),6,"ptr value is incorrect");
+	mono::Ptr<Color4> ptr2(0.1f, 1.f, 1.f, 1.f);
+	ASSERT_EQUALS(( * ptr2.get()).r, 0.1f, "ptr value is incorrect");
+	mono::Ptr<Color4> ptr3(std::move(ptr2));
+	ASSERT_EQUALS((*ptr3.get()).r, 0.1f, "ptr value is incorrect");
+	ASSERT_EQUALS(ptr3->r, 0.1f, "ptr value is incorrect");
+	ASSERT_EQUALS((ptr2.get()), nullptr, "ptr value is incorrect");
+	std::unique_ptr<Color4> foo(new Color4(0.1f, 1.f, 1.f, 1.f));
+	foo->r = 5;
 }
 
 void TestUI()

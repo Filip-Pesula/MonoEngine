@@ -25,21 +25,26 @@ namespace UI
 	}
 	void Window::close()
 	{
-		glfwDestroyWindow(window);
+		if (window != nullptr)
+			glfwDestroyWindow(window);
+		window = nullptr;
 	}
 	Vec2i Window::getSize()
 	{
 		int x = 0; int y = 0;
-		glfwGetWindowSize(window,&x,&y);
+		if (window != nullptr)
+			glfwGetWindowSize(window,&x,&y);
 		return Vec2i{ x , y };
 	}
 	void Window::swapBuffers()
 	{
-		glfwSwapBuffers(window);
+		if (window != nullptr)
+			glfwSwapBuffers(window);
 	}
 	bool Window::WindowShouldClose()
 	{
-		return glfwWindowShouldClose(window);
+		if (window != nullptr)
+			return glfwWindowShouldClose(window);
 	}
 	GLFWwindow* Window::getWindow()
 	{

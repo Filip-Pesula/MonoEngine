@@ -149,6 +149,9 @@ namespace test
 
 	void TestWindow::draw()
 	{
+		if (testWindow.getWindow() == nullptr) {
+			return;
+		}
 		glfwMakeContextCurrent(testWindow.getWindow());
 		glDrawBuffer(GL_COLOR_ATTACHMENT0);
 		glClearDepth(1.0f);

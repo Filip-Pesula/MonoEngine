@@ -16,6 +16,7 @@ namespace monoEngine
 	public:
 		MenuList(Unit width, Vec2<Unit> position, UI::UIelement* parent, Texture* fontTexture);
 		void addElement(std::string text, Unit height);
+		void setElementOnClic(int elemntId, std::function<void(void)> f);
 		void setVisible();
 		void setInvisible();
 		bool onRay(UI::Cursor& cursor) override;

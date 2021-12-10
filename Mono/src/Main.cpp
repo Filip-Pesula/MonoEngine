@@ -125,7 +125,6 @@ int main(void)
 		mainWindow.draw();
 		testWindow.draw();
 
-
 		/* Poll for and process events */
 		glfwPollEvents();
 

@@ -16,6 +16,7 @@
 #include "UIenums.h"
 #include "BeGL/BeGL_FrameBuffer.h"
 #include "Cursor.h"
+#include <array>
 
 namespace UI
 {
@@ -43,7 +44,7 @@ namespace UI
 
 		std::vector<UIelement*>  elementList;
 
-
+		std::vector<std::pair<std::array<int,5>,std::function<void(void)>>> shortuchCallbacks;
 
 		float* tiledVertex;
 		unsigned int* tiledIndex;
@@ -67,7 +68,7 @@ namespace UI
 		void genStaticBuffers(unsigned int &vertexBufferRef, unsigned int &indexBufferRef, float* vertexBuffer, int vertexBufferSize, unsigned int* indexBuffer, int indexBufferSize);
 		virtual void InitUI(GLFWwindow* window);
 		void addElement(UIelement* elementPtr);
-		
+		void addGlobaShortCutListener(std::array<int,5> keys, std::function<void(void)> callback);
 		int Add_Texture(std::string TextureRef, std::string  TextureName);
 		int Add_TextTexture(std::string TextureRef, std::string  TextureName);
 		

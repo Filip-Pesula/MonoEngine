@@ -55,6 +55,14 @@ namespace monoEngine
 		));
 		container.mHeight = container.mHeight + Unit(UnitType::px, 2) + height;
 	}
+	void MenuList::setElementOnClic(int elemntId, std::function<void(void)> f)
+	{
+		if (elemntId<0 && elemntId>buttonList.size() - 1) {
+			LogError(__FILE__ << " : " << __LINE__ << ": Assigning to incorrect button");
+			return;
+		}
+		buttonList[elemntId]->addOnclickListner(f);
+	}
 	void MenuList::setInvisible()
 	{
 		isVisible = false;

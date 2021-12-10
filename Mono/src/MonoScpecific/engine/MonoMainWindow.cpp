@@ -1,5 +1,10 @@
 #include "MonoMainWindow.h"
 #include "monoResourceManagment/SceneLoader.h"
+#include <windows.h>
+
+#include <resourceManagment/FilePathManager.h>
+
+
 namespace monoEngine
 {
 	MonoMainWindow::~MonoMainWindow()
@@ -62,6 +67,10 @@ namespace monoEngine
 				{ UnitType::sw,0.f }),
 			&resourceManager.woodTexture,
 			topList.get());
+
+		fileBtn->addOnclickListner([]() {
+
+		});
 		mainUIptr->addElement(fileBtn.get());
 
 		fileBtnText = std::make_unique <UI::BetterText> (
@@ -95,6 +104,9 @@ namespace monoEngine
 			projectBtn.get(), 
 			&resourceManager.textTexture);
 		projectList->addElement("LoadFile",Unit(UnitType::px,15));
+		projectList->setElementOnClic(0, []() {
+			Log(FilePathManager::OpenFileDialog(nullptr,"G:\\","")[0]);
+		});
 		projectList->addElement("CreateScene",Unit(UnitType::px,15));
 		mainUIptr->addElement(projectList.get());
 		projectBtn->addOnclickListner([&]() {
@@ -131,7 +143,9 @@ namespace monoEngine
 				),
 			nullptr);
 		mainUIptr->addElement(sceneName.get());
-		
+		mainUIptr->addGlobaShortCutListener({ GLFW_KEY_LEFT_CONTROL,GLFW_KEY_S,-1,-1,-1 }, []() {
+			FilePathManager::SaveFileDialog(nullptr,"D:\\","");
+			});
 	}
 	void MonoMainWindow::draw()
 	{

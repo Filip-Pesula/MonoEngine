@@ -142,6 +142,11 @@ namespace UI
 		maxDrawIndex++;
 		elementList[elementList.size() - 1]->drawIndex = maxDrawIndex;
 	}
+	void UI::addGlobaShortCutListener(std::array<int,5> keys, std::function<void(void)> callback)
+	{
+		shortuchCallbacks.push_back({ keys, callback });
+
+	}
 	int UI::Add_Texture(std::string TextureRef, std::string  TextureName)
 	{
 		TextureList.push_back(Texture(TextureRef, Texture::TextureType::uI_texture));
@@ -223,41 +228,21 @@ namespace UI
 		glfwSetCursor(eWindow, activeCursor);
 		for (int j = 0; j <= maxDrawIndex; j++)
 		{
-			/*
-			for (int i = 0; i < ButtonList.size(); i++)
-			{
-				if (ButtonList[i]->drawIndex != j)continue;
-				BindShaderBuffer();
-				ButtonList[i]->Resize({ width ,height });
-				ButtonList[i]->Draw(ShaderUIShader, TextureList);
-			}
-			for (int i = 0; i < TextList.size(); i++)
-			{
-				if (TextList[i]->drawIndex != j)continue;
-				TextList[i]->Resize({ width ,height });
-				TextList[i]->Draw(ShaderUIShader, TextureList);
-			}
-			for (int i = 0; i < ContainerList.size(); i++)
-			{
-				if (ContainerList[i]->drawIndex != j)continue;
-				BindShaderBuffer();
-				ContainerList[i]->Resize({ width ,height });
-				ContainerList[i]->Draw(ShaderUIShader);
-			}
-			for (int i = 0; i < GrabberList.size(); i++)
-			{
-				if (GrabberList[i]->drawIndex != j)continue;
-				BindShaderBuffer();
-				GrabberList[i]->Resize({ width ,height });
-				GrabberList[i]->Draw(ShaderUIShader);
-			}
-			*/
 			for (int i = 0; i < elementList.size(); i++)
 			{
 				if (elementList[i]->drawIndex != j)continue;
 				BindShaderBuffer();
 				elementList[i]->Resize({ width ,height });
 				elementList[i]->Draw(ShaderUIShader);
+			}
+			for (int i = 0; i < shortuchCallbacks.size(); i++)
+			{
+				std::array<int,5> arr = shortuchCallbacks[i].first;
+				auto res = std::find_if(arr.begin(), arr.end(), [=](int x) {
+					return (GLFW_PRESS != glfwGetKey(eWindow, x)&&x!=-1);
+				});
+				if(res == arr.end())
+					shortuchCallbacks[i].second();
 			}
 		}
 		
